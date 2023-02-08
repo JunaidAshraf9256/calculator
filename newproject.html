@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: rgb(107, 1, 1);
+        }
+    </style>
+</head>
+<body class="body">
+    <h1><u>JAVA SCRIPT</u></h1>
+    <script>
+        
+        const asci = {
+        chr: function(num) {
+          return String.fromCharCode(64 + num);
+        }
+      };
+      
+      const input = document.createElement("input");
+      input.type = "number";
+      input.min = 1;
+      input.max = 26;
+      
+      const button = document.createElement("button");
+      button.textContent = "Show Alphabet";
+      button.addEventListener("click", function() {
+        const num = input.value;
+        const result = asci.chr(num);
+        alert(result);
+      });
+      
+      document.body.appendChild(input);
+      document.body.appendChild(button);
+    </script> 
+</body>
+</html>

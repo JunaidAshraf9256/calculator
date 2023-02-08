@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <br>
+    <br>
+    <input type="text" id="input">
+    <br>
+    <br>
+    <input type="text" id="input">
+    <br>
+    <br>
+    <button onclick="storeData">STORE</button>
+    <button onclick="updateData">UPDATE</button>
+    <button onclick="deleteData">DELETE</button>
+
+        <script>
+            var array = [];
+store.addEventListener('click', function() {
+  array.push(input.value);
+  input.value = '';
+  list.innerHTML = '';
+  for (var i = 0; i < array.length; i++) {
+    var item = document.createElement('li');
+    item.innerHTML = array[i];
+    list.appendChild(item);
+  }
+});
+
+deleteButton.addEventListener('click', function() {
+  array.pop();
+  list.innerHTML = '';
+  for (var i = 0; i < array.length; i++) {
+    var item = document.createElement('li');
+    item.innerHTML = array[i];
+    list.appendChild(item);
+  }
+});
+
+update.addEventListener('click', function() {
+  array[array.length - 1] = input.value;
+  input.value = '';
+  list.innerHTML = '';
+  for (var i = 0; i < array.length; i++) {
+    var item = document.createElement('li');
+    item.innerHTML = array[i];
+    list.appendChild(item);
+  }
+});
+
+            </script>
+</body>
+</html>
